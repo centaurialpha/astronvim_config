@@ -1,12 +1,32 @@
 return {
-  -- You can also add new plugins here as well:
-  -- Add plugins, the lazy syntax
-  -- "andweeb/presence.nvim",
-  -- {
-  --   "ray-x/lsp_signature.nvim",
-  --   event = "BufRead",
-  --   config = function()
-  --     require("lsp_signature").setup()
-  --   end,
-  -- },
+    -- You can also add new plugins here as well:
+    -- Add plugins, the lazy syntax
+    -- "andweeb/presence.nvim",
+    -- {
+    --   "ray-x/lsp_signature.nvim",
+    --   event = "BufRead",
+    --   config = function()
+    --     require("lsp_signature").setup()
+    --   end,
+    -- },
+    -- {
+    --     "catppuccin/nvim",
+    --     as = "catppuccin",
+    --     config = function()
+    --         require("catppuccin").setup({
+    --             flavour = "macchiato",
+    --             color_overrides = {
+    --                 all = {
+    --                     base = "#181a1f"
+    --                 }
+    --             },
+    --         })
+    --     end,
+    -- },
+    {
+        "folke/todo-comments.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        opts = {},
+        event = "User AstroFile",
+    }
 }

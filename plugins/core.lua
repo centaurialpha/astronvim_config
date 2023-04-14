@@ -4,22 +4,30 @@ return {
     "goolord/alpha-nvim",
     opts = function(_, opts)
       -- customize the dashboard header
-      opts.section.header.val = {
-        " █████  ███████ ████████ ██████   ██████",
-        "██   ██ ██         ██    ██   ██ ██    ██",
-        "███████ ███████    ██    ██████  ██    ██",
-        "██   ██      ██    ██    ██   ██ ██    ██",
-        "██   ██ ███████    ██    ██   ██  ██████",
-        " ",
-        "    ███    ██ ██    ██ ██ ███    ███",
-        "    ████   ██ ██    ██ ██ ████  ████",
-        "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-        "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-        "    ██   ████   ████   ██ ██      ██",
-      }
+      opts.section.header.val = {}
       return opts
     end,
   },
+  {
+    "rcarriga/nvim-notify",
+    config = function()
+      require("notify").setup({
+        render = "minimal"
+      })
+      vim.notify = require('notify')
+    end
+  },
+  {
+    "AstroNvim/astrotheme",
+    opts = {
+      palette = "astrodark",
+      palettes = {
+        astrodark = {
+          base = "#181a1f"
+        }
+      }
+    }
+  }
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
   --
