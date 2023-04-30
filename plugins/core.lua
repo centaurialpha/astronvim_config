@@ -27,7 +27,7 @@ return {
         }
       }
     }
-  }
+  },
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
   --
@@ -82,4 +82,10 @@ return {
   --     }, { mode = "n", prefix = "<leader>" })
   --   end,
   -- },
+  {
+    "rebelot/heirline.nvim",
+      opts = {
+        showtabline = 0
+      }
+  }
 }
